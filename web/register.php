@@ -80,89 +80,81 @@
     <!-- FORMULARIO EMPRESA -->
     <div id="form-empresa" class="formulario">
         <h3>Registro para Empresa</h3>
-        <form>
-            <label>Nombre de la empresa:</label><br>
-            <input type="text" name="empresaNombre"><br>
+        <form action="../controllers/registro_empresa.php" method="POST">
+        <label>Nombre de la empresa:</label><br>
+            <input type="text" name="nombre" id="nombre"><br>
 
             <label>Correo:</label><br>
-            <input type="email" name="empresaCorreo"><br>
+            <input type="email" name="correo" id="correo"><br>
 
             <label>Contraseña:</label><br>
-            <input type="password" name="empresaPassword"><br>
+            <input type="password" name="contrasena" id="contrasena"><br>
 
             <label>Dirección:</label><br>
-            <input type="text" name="empresaDireccion"><br>
+            <input type="text" name="direccion" id="direccion"><br>
 
-            <button type="submit" class="btn btn-primary mt-3">Registrarse</button>
-            <button type="button" class="btn btn-secondary mt-2" onclick="volverSeleccion()">Volver a la selección</button>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+            <button type="button" class="btn btn-secondary" onclick="volverSeleccion()">Volver a la selección</button>
         </form>
     </div>
 
     <!-- FORMULARIO EMPLEADO -->
     <div id="form-empleado" class="formulario">
         <h3>Registro para Empleado</h3>
-        <form>
-            <label>Nombre(s):</label><br>
-            <input type="text" name="nombre"><br>
+    <form action="controllers/registro_empleado.php" method="POST" enctype="multipart/form-data">
+    <label>Nombre(s):</label><br>
+    <input type="text" name="nombre"><br>
 
-            <label>Apellido(s):</label><br>
-            <input type="text" name="apellidos"><br>
+    <label>Apellido(s):</label><br>
+    <input type="text" name="apellido"><br>
 
-            <label>Correo Electrónico:</label><br>
-            <input type="email" name="correo"><br>
+    <label>Correo Electrónico:</label><br>
+    <input type="email" name="correo_electronico"><br>
 
-            <label>Contraseña:</label><br>
-            <input type="password" name="password"><br>
+    <label>Teléfono:</label><br>
+    <input type="text" name="telefono"><br>
 
-            <label>Teléfono:</label><br>
-            <input type="text" name="telefono"><br>
+    <label>Dirección:</label><br>
+    <input type="text" name="direccion"><br>
 
-            <label>Dirección:</label><br>
-            <input type="text" name="direccion"><br>
+    <label>Ciudad / Provincia:</label><br>
+    <input type="text" name="ciudad_provincia"><br>
 
-            <label>Ciudad / Provincia:</label><br>
-            <input type="text" name="ciudad"><br>
+    <label>Formación Académica:</label><br>
+    <textarea name="formacion_academica" rows="2"></textarea><br>
 
-            <label>Formación Académica:</label><br>
-            <textarea name="formacion" rows="2"></textarea><br>
+    <label>Experiencia Laboral:</label><br>
+    <textarea name="experiencia_laboral" rows="2"></textarea><br>
 
-            <label>Experiencia Laboral:</label><br>
-            <textarea name="experiencia" rows="2"></textarea><br>
+    <label>Habilidades Clave:</label><br>
+    <input type="text" name="habilidades_clave"><br>
 
-            <label>Habilidades Clave:</label><br>
-            <input type="text" name="habilidades"><br>
+    <label>Idiomas:</label><br>
+    <input type="text" name="idiomas"><br>
 
-            <label>Idiomas:</label><br>
-            <input type="text" name="idiomas"><br>
+    <label>Objetivo Profesional / Resumen:</label><br>
+    <textarea name="objetivo_profesional" rows="2"></textarea><br>
 
-            <label>Objetivo Profesional / Resumen:</label><br>
-            <textarea name="objetivo" rows="2"></textarea><br>
+    <label>Logros o Proyectos Destacados:</label><br>
+    <textarea name="logros_proyectos" rows="2"></textarea><br>
 
-            <label>Logros o Proyectos Destacados:</label><br>
-            <textarea name="logros" rows="2"></textarea><br>
+    <label>Disponibilidad:</label><br>
+    <select name="disponibilidad">
+        <option value="inmediata">Inmediata</option>
+        <option value="15 días">En 15 días</option>
+        <option value="30 días">En 30 días</option>
+    </select><br><br>
 
-            <label>Disponibilidad:</label><br>
-            <select name="disponibilidad">
-                <option value="inmediata">Inmediata</option>
-                <option value="15dias">En 15 días</option>
-                <option value="30dias">En 30 días</option>
-            </select><br><br>
+    <label>Redes Profesionales (LinkedIn, etc.):</label><br>
+    <input type="text" name="redes_profesionales"><br>
 
-            <label>Redes Profesionales (LinkedIn, etc.):</label><br>
-            <input type="text" name="redes"><br>
+    <label>Referencias:</label><br>
+    <textarea name="referencias" rows="2"></textarea><br>
 
-            <label>Referencias:</label><br>
-            <textarea name="referencias" rows="2"></textarea><br>
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+    <button type="button" class="btn btn-secondary" onclick="volverSeleccion()">Volver a la selección</button>
+</form>
 
-            <label>Currículum (PDF):</label><br>
-            <input type="file" name="cv"><br>
-
-            <label>Foto (opcional):</label><br>
-            <input type="file" name="foto"><br>
-
-            <button type="submit" class="btn btn-primary mt-3">Registrarse</button>
-            <button type="button" class="btn btn-secondary mt-2" onclick="volverSeleccion()">Volver a la selección</button>
-        </form>
     </div>
 </body>
 </html>

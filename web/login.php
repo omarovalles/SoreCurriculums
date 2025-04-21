@@ -41,7 +41,7 @@
     <div class="container">
         <h1>Bienvenido a SoreCurriculums</h1>
         <p>Por favor, inicia sesión para continuar.</p>
-        <form action="login.php" method="POST">
+        <form action="controllers/logeo.php" method="POST">
             <label for="username">Usuario:</label><br>
             <input type="text" id="username" name="username"><br><br>
             <label for="password">Contraseña:</label><br>
