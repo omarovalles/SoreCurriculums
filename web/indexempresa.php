@@ -1,3 +1,33 @@
+<?php
+session_start();
+require_once('../library/motor.php'); 
+
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$usuarioid = $_SESSION['usuario']->id;
+
+// Detectar si es empresa
+$sql_empresa = "SELECT id FROM empresa WHERE usuarioid = :usuarioid";
+$es_empresa = conexion::consulta($sql_empresa, [':usuarioid' => $usuarioid]);
+
+// Detectar si es empleado
+$sql_empleado = "SELECT id FROM curriculum WHERE usuarioid = :usuarioid";
+$es_empleado = conexion::consulta($sql_empleado, [':usuarioid' => $usuarioid]);
+
+// Variable para saber a dónde redirigir desde "Inicio"
+$inicio_url = "#"; // por defecto si no se detecta nada
+if ($es_empresa && count($es_empresa) > 0) {
+    $inicio_url = "indexempresa.php?id=$usuarioid";
+} elseif ($es_empleado && count($es_empleado) > 0) {
+    $inicio_url = "index.php?id=$usuarioid";
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,16 +58,16 @@
     <nav class="navegador">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Inicio</a>
+                <a class="nav-link active" href="<?php echo $inicio_url; ?>">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Perfil</a>
+                <a class="nav-link" href="../web/perfil.php?id=<?php echo $_SESSION['usuario']->id; ?>">Perfil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="buscaroferta.php">Ver ofertas</a>
+                <a class="nav-link" href="../web/buscaroferta.php?id=<?php echo $_SESSION['usuario']->id; ?>">Ver ofertas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="publicaroferta.php">Publicar oferta</a>
+                <a class="nav-link" href="../web/publicaroferta.php?id=<?php echo $_SESSION['usuario']->id; ?>">Publicar oferta</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="login.php">Cerrar sesión</a>

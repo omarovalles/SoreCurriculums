@@ -26,7 +26,7 @@ if ($usuarios && count($usuarios) > 0) {
         $_SESSION['usuario'] = $usuario;
         $_SESSION['rol'] = 'empresa';
         $_SESSION['empresa'] = $empresa[0];
-        header("Location: ../web/indexempresa.php");
+        header("Location: ../web/indexempresa.php?id=" . $usuarioId);
         exit;
     }
 
@@ -38,7 +38,7 @@ if ($usuarios && count($usuarios) > 0) {
         $_SESSION['usuario'] = $usuario;
         $_SESSION['rol'] = 'empleado';
         $_SESSION['curriculum'] = $empleado[0];
-        header("Location: ../web/index.php");
+        header("Location: ../web/index.php?id=" . $usuarioId);
         exit;
     }
 
