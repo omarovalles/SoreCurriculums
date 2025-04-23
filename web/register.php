@@ -95,7 +95,7 @@
     <!-- FORMULARIO EMPLEADO -->
     <div id="form-empleado" class="formulario">
         <h3>Registro para Empleado</h3>
-    <form action="controllers/registro_empleado.php" method="POST" enctype="multipart/form-data">
+    <form action="../controllers/registro_empleado.php" method="POST" enctype="multipart/form-data">
     <label>Nombre(s):</label><br>
     <input type="text" name="nombre"><br>
 

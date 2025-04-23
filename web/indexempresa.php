@@ -58,7 +58,7 @@ if ($es_empresa && count($es_empresa) > 0) {
     <nav class="navegador">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="<?php echo $inicio_url; ?>">Inicio</a>
+            <a class="nav-link active" href="<?php echo $inicio_url; ?>">Inicio</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../web/perfil.php?id=<?php echo $_SESSION['usuario']->id; ?>">Perfil</a>
@@ -70,11 +70,14 @@ if ($es_empresa && count($es_empresa) > 0) {
                 <a class="nav-link" href="../web/publicaroferta.php?id=<?php echo $_SESSION['usuario']->id; ?>">Publicar oferta</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="../web/ofertaspublicadas.php?id=<?php echo $_SESSION['usuario']->id; ?>">Ofertas publicadas</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="login.php">Cerrar sesión</a>
             </li>
             
         </ul>
-    </nav>
+                </nav>
 
     <div class="mt-5">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">

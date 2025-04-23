@@ -75,21 +75,25 @@ if ($es_empresa && count($es_empresa) > 0) {
 <body>
 <nav class="navegador">
         <ul class="nav nav-tabs">
-        <li class="nav-item">
+            <li class="nav-item">
             <a class="nav-link active" href="<?php echo $inicio_url; ?>">Inicio</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="../web/perfil.php?id=<?php echo $_SESSION['usuario']->id; ?>">Perfil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="buscaroferta.php">Ver ofertas</a>
+                <a class="nav-link" href="../web/buscaroferta.php?id=<?php echo $_SESSION['usuario']->id; ?>">Ver ofertas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="publicaroferta.php">Publicar oferta</a>
+                <a class="nav-link" href="../web/publicaroferta.php?id=<?php echo $_SESSION['usuario']->id; ?>">Publicar oferta</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../web/ofertaspublicadas.php?id=<?php echo $_SESSION['usuario']->id; ?>">Ofertas publicadas</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="login.php">Cerrar sesión</a>
             </li>
+            
         </ul>
     </nav>
     <!---Ofertas de trabajo disponibles para ver-->

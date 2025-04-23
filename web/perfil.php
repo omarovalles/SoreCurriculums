@@ -74,10 +74,10 @@ if ($es_empresa && count($es_empresa) > 0) {
                 <a class="nav-link" href="../web/perfil.php?id=<?php echo $_SESSION['usuario']->id; ?>">Perfil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="buscaroferta.php">Ver ofertas</a>
+                <a class="nav-link" href="../web/buscaroferta.php?id=<?php echo $_SESSION['usuario']->id; ?>">Ver ofertas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="publicaroferta.php">Publicar oferta</a>
+                <a class="nav-link" href="../web/publicaroferta.php?id=<?php echo $_SESSION['usuario']->id; ?>">Publicar oferta</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="login.php">Cerrar sesión</a>
