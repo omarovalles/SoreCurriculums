@@ -34,11 +34,15 @@
                 <a class="nav-link" href="#">Perfil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="buscaroferta.php">Buscar ofertas</a>
+                <a class="nav-link" href="buscaroferta.php">Ver ofertas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="publicaroferta.php">Publicar oferta</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="login.php">Cerrar sesión</a>
             </li>
+            
         </ul>
     </nav>
 
@@ -51,21 +55,21 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images.jpeg" class="d-block w-100" alt="Slide 1">
+                    <img src="../resources/images.jpeg" class="d-block w-100" alt="Slide 1">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Primera imagen</h5>
                         <p>Contenido representativo de la primera imagen.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images.jpeg" class="d-block w-100" alt="Slide 2">
+                    <img src="../resources/images.jpeg" class="d-block w-100" alt="Slide 2">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Segunda imagen</h5>
                         <p>Contenido representativo de la segunda imagen.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images.jpeg" class="d-block w-100" alt="Slide 3">
+                    <img src="../resources/images.jpeg" class="d-block w-100" alt="Slide 3">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Tercera imagen</h5>
                         <p>Contenido representativo de la tercera imagen.</p>

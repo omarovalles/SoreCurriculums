@@ -40,14 +40,15 @@
 <body>
     <div class="container">
         <h1>Bienvenido a SoreCurriculums</h1>
-        <p>Por favor, inicia sesión para continuar.</p>
-        <form action="../controllers/logeo.php" method="POST">
+        <p>Crea tu cuenta!</p>
+        <form action="../controllers/registro_usuario.php" method="POST">
+            <label for="correo">Correo:</label><br>
+            <input type="email" id="correo" name="correo"><br><br>
             <label for="username">Usuario:</label><br>
             <input type="text" id="nombre" name="nombre"><br><br>
             <label for="password">Contraseña:</label><br>
             <input type="password" id="contrasena" name="contrasena"><br><br>
-            <input type="submit" value="Iniciar sesión" class="btn btn-success">
-            <a href="pre-register.php" class="btn btn-primary">Crear cuenta</a>
+            <input type="submit" value="Crear cuenta" class="btn btn-success">
         </form>
 </body>
 </html>

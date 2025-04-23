@@ -81,14 +81,8 @@
     <div id="form-empresa" class="formulario">
         <h3>Registro para Empresa</h3>
         <form action="../controllers/registro_empresa.php" method="POST">
-        <label>Nombre de la empresa:</label><br>
+            <label>Nombre de la empresa:</label><br>
             <input type="text" name="nombre" id="nombre"><br>
-
-            <label>Correo:</label><br>
-            <input type="email" name="correo" id="correo"><br>
-
-            <label>Contraseña:</label><br>
-            <input type="password" name="contrasena" id="contrasena"><br>
 
             <label>Dirección:</label><br>
             <input type="text" name="direccion" id="direccion"><br>

@@ -1,5 +1,15 @@
 <?php
 include ('../library/motor.php');
+session_start();  // 👈 Necesario para usar $_SESSION
+
+// Recuperar el ID del usuario desde la sesión
+$usuarioid = $_SESSION['id_usuario'] ?? null;
+
+if (!$usuarioid) {
+    // Si no hay ID, redirige o muestra error (por si entran al archivo directo sin registro)
+    header("Location: ../web/registro_usuario.php");
+    exit;
+}
 
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
@@ -16,7 +26,6 @@ $logros_proyectos = $_POST['logros_proyectos'];
 $disponibilidad = $_POST['disponibilidad'];
 $redes_profesionales = $_POST['redes_profesionales'];
 $referencias = $_POST['referencias'];
-
 
 $sql = "INSERT INTO curriculum (
     nombre, apellido, correo_electronico, telefono, direccion, ciudad_provincia,
@@ -51,7 +60,7 @@ $parametros = [
 
 conexion::exec($sql, $parametros);
 
-// Redirigir
+// Redirigir después de guardar
 header("Location: ../web/login.php");
 exit();
 ?>
