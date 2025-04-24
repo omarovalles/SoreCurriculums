@@ -21,8 +21,8 @@ if (!isset($_GET['id'])) {
 $id = $_GET['id'];
 
 // Eliminar personaje de la base de datos
-$sql = "DELETE FROM ofertas WHERE id = :id";
-$parametros = [':id' => $id];
+$sql = "DELETE FROM ofertas WHERE idoferta = :idoferta";
+$parametros = [':idoferta' => $id];
 
 conexion::exec($sql, $parametros);
     

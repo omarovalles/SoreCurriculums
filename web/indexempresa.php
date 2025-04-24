@@ -77,7 +77,7 @@ if ($es_empresa && count($es_empresa) > 0) {
             </li>
             
         </ul>
-                </nav>
+    </nav>
 
     <div class="mt-5">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">

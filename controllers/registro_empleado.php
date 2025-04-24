@@ -1,6 +1,6 @@
 <?php
 include ('../library/motor.php');
-session_start();  // 👈 Necesario para usar $_SESSION
+session_start(); 
 
 // Recuperar el ID del usuario desde la sesión
 $usuarioid = $_SESSION['id_usuario'] ?? null;
